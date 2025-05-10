@@ -1,5 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
 .TitleHeader {
     color: blue;
     text-align: center;
     font-weight: 900;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.buttonMenu {
+    display: flex;
+    justify-content: center;
+
+}
+
+.button {
+    margin: 1rem;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10%;
+    border: 5px inset blue
+}
+
+.contentDescr {
+    margin-top: 3rem;
+    border: 10px groove green
 }
