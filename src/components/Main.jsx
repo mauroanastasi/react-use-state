@@ -1,6 +1,7 @@
 import React from 'react'
 import languages from '../data/languages'
 import ContentButton from './ContentButton'
+import Button from './button'
 
 const Main = () => {
     <languages />
@@ -9,17 +10,16 @@ const Main = () => {
         <>
             <div className="container">
                 <div className='buttonMenu'>
-                    <button className='button'>HTML</button>
-                    <button className='button'>CSS</button>
-                    <button className='button'>Javascript</button>
-                    <button className='button'>Node.js</button>
-                    <button className='button'>Express</button>
-                    <button className='button'>ReactUs</button>
+                    {languages.map(language => (
+                        <Button title={language.title} key={language.id} />
+                    ))}
                 </div>
-                {languages.map(language => (
-                    <ContentButton language={language} key={language.id} />
-                ))}
-            </div>
+                <div className="contentDescr">
+                    {languages.map(language => (
+                        <ContentButton language={language} key={language.id} />
+                    ))}
+                </div>
+            </div >
 
         </>
     )
