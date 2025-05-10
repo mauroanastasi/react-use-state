@@ -13,7 +13,7 @@ const Main = () => {
                     <button className='button'>ReactUs</button>
                 </div>
                 <div className="contentDescr">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, beatae error ipsum, fugit nisi veritatis totam deserunt eum molestiae architecto corrupti aliquam eligendi velit dolorem dolor iusto, provident repudiandae earum?</p>
+                    <p>HTML (HyperText Markup Language) è il linguaggio standard per creare pagine e applicazioni web. Struttura il contenuto web e fornisce elementi di base come titoli, paragrafi e immagini.</p>
                 </div>
             </div>
 
