@@ -1,6 +1,10 @@
 import React from 'react'
+import languages from '../data/languages'
+import ContentButton from './ContentButton'
 
 const Main = () => {
+    <languages />
+
     return (
         <>
             <div className="container">
@@ -12,9 +16,9 @@ const Main = () => {
                     <button className='button'>Express</button>
                     <button className='button'>ReactUs</button>
                 </div>
-                <div className="contentDescr">
-                    <p>HTML (HyperText Markup Language) è il linguaggio standard per creare pagine e applicazioni web. Struttura il contenuto web e fornisce elementi di base come titoli, paragrafi e immagini.</p>
-                </div>
+                {languages.map(language => (
+                    <ContentButton language={language} key={language.id} />
+                ))}
             </div>
 
         </>
