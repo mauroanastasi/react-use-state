@@ -1,28 +1,31 @@
 import React from 'react'
 import languages from '../data/languages'
-import ContentButton from './ContentButton'
-import Button from './button'
+import { useState } from 'react';
 
 const Main = () => {
-    <languages />
-
+    const [selectedButton, setSelectedButton] = useState(languages[0]);
     return (
         <>
+            <languages />
             <div className="container">
-                <div className='buttonMenu'>
-                    {languages.map(language => (
-                        <Button title={language.title} key={language.id} />
+                <div className="buttonMenu">
+                    {languages.map((languages) => (
+                        <button onClick={() => setSelectedButton(languages)} className='button' key={languages.id}>
+                            {languages.title}
+                        </button>
                     ))}
                 </div>
+            </div>
+            <div>
                 <div className="contentDescr">
-                    {languages.map(language => (
-                        <ContentButton language={language} key={language.id} />
-                    ))}
+                    <h5>{selectedButton.title}</h5>
+                    <p>{selectedButton.description}</p>
                 </div>
-            </div >
-
+            </div>
         </>
+
     )
 }
 
 export default Main
+
